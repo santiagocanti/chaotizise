@@ -1,0 +1,26 @@
+{
+  "name": "chaotizise",
+  "version": "0.1.0",
+  "description": "Tool to populate an object with random data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagocanti/chaotizise.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santiagocanti/chaotizise/issues"
+  },
+  "homepage": "https://github.com/santiagocanti/chaotizise#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
