@@ -1,6 +1,6 @@
 {
   "name": "chaotizise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tool to populate an object with random data",
   "main": "index.js",
   "scripts": {
