@@ -1,19 +1,25 @@
 const faker = require('faker/locale/en');
 
 function populateObject(object, maxDepth, minDepth, maxPropertiesPerDepth, minPropertiesPerDepth, currentDepth) {
-  const properties = Math.floor(Math.random() * (maxPropertiesPerDepth - minPropertiesPerDepth + 1)) + minPropertiesPerDepth;
+  const properties = randomBetween({ min: minPropertiesPerDepth, max: maxPropertiesPerDepth });
   minDepth = minDepth > currentDepth ? minDepth : currentDepth;
-  const depth = Math.floor(Math.random() * (maxDepth - minDepth + 1)) + minDepth;
+  const depth = randomBetween({ min: minDepth, max: maxDepth });
+  const propertyLength = randomBetween({ min: 1, max: 5 });
 
   for (let i = 0; i < properties; i++) {
     if (currentDepth === depth) {
-      object[faker.random.alphaNumeric()] = faker.random.alphaNumeric();
+      const propertyValueLength = randomBetween({ min: 1, max: 5 });
+      object[faker.random.alphaNumeric(propertyLength)] = faker.random.alphaNumeric(propertyValueLength);
     } else {
-      const property = faker.random.alphaNumeric()
+      const property = faker.random.alphaNumeric(propertyLength);
       object[property] = {};
       populateObject(object[property], maxDepth, minDepth, maxPropertiesPerDepth, minPropertiesPerDepth, currentDepth + 1);
     }
   }
+}
+
+function randomBetween({min, max}) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function chaotizise(options = {}) {

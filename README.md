@@ -83,6 +83,7 @@ Output:
 Type: `Integer`
 
 Defines the maximum amount of nested objects.
+Default: 3
 
 Example:
 ```js
@@ -115,6 +116,7 @@ Output:
 Type: `Integer`
 
 Defines the minimum amount of nested objects.
+Default: 1
 
 Example:
 ```js
@@ -150,6 +152,7 @@ Output:
 Type: `Integer`
 
 Defines the maximum amount of properties per level of depth.
+Default: 3
 
 Example:
 ```js
@@ -177,7 +180,7 @@ Output:
 Type: `Integer`
 
 Defines the minimum amount of properties per level of depth.
-
+Default: 1
 
 Example:
 ```js
